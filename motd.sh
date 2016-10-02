@@ -12,7 +12,7 @@ VAR_IP_EXTERN="$(wget -q -O - http://icanhazip.com/ | tail)"
 VAR_TEMP="$(/opt/vc/bin/vcgencmd measure_temp | cut -c "6-9")°C"
 VAR_LAST_LOGIN="$(last -i $USER -F | grep -v 'still logged' | head -1 | awk '{print $6,$5,$8,$7}')"
 VAR_LAST_LOGIN_IP="$(last -i $USER -F | grep -v 'still logged' | head -1 | awk '{print $3}')"
-VAR_DATE="$(date +"%A, %e %B %Y, %R")"
+VAR_DATE="$(date +"%A,%e %B %Y, %R")"
 VAR_UNAME="$(uname -snrmo)"
 
 
